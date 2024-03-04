@@ -21,18 +21,28 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="World" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.924585, 0.476546, 0.931143)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.38569, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(6.87396, 0, 0, 0, 1, 0, 0, 0, 6.87396, -0.0800166, 0, -0.171134)
+transform = Transform3D(13.908, 0, 0, 0, 2, 0, 0, 0, 13.908, 0, -1.94403, 0)
 shape = SubResource("ConcavePolygonShape3D_wnn4i")
 
 [node name="Better_Island" parent="StaticBody3D" instance=ExtResource("1_skc43")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0800166, 0, -0.171134)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.08, -2, -0.171)
+
+[node name="Cube" parent="StaticBody3D/Better_Island" index="0"]
+transform = Transform3D(6.954, 0, 0, 0, 1.012, 0, 0, 0, 6.954, 0, 0, 0)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_ghsng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.604853, 0.655034, -0.458751)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CharacterBody3D"]
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/SpringArm3D"]
 
 [node name="Node3D" type="Node3D" parent="."]
 script = ExtResource("3_ca6vw")
