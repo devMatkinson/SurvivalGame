@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cp3hmwfsve357"]
+
+[ext_resource type="Script" path="res://ProgressBar.gd" id="1_wexuk"]
+
+[sub_resource type="Theme" id="Theme_0igoe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_af30f"]
+bg_color = Color(1, 0.27451, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nirb3"]
+bg_color = Color(0.835294, 0.835294, 0.835294, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ix556"]
+outline_size = 5
+outline_color = Color(0.333333, 0.513726, 0.611765, 1)
+
+[node name="ProgressBar" type="ProgressBar"]
+offset_right = 246.0
+offset_bottom = 27.0
+theme = SubResource("Theme_0igoe")
+theme_override_styles/background = SubResource("StyleBoxFlat_af30f")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nirb3")
+value = 80.0
+show_percentage = false
+script = ExtResource("1_wexuk")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 67.0
+offset_right = 196.0
+offset_bottom = 27.0
+text = "Health 100/100"
+label_settings = SubResource("LabelSettings_ix556")

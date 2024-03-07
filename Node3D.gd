@@ -11,14 +11,19 @@ var Sun : DirectionalLight3D
 var moon : DirectionalLight3D
 @export var moon_color : Gradient
 @export var moon_intensity : Curve
+
+var environment : WorldEnvironment
+@export var sky_top_color : Gradient
 @export var sky_horizon_color : Gradient
+
 func _ready():
 	time_rate = 1.0 / day_length
 	time = start_time
 	
 	Sun = get_node("Sun")
 	moon = get_node("Moon")
-
+	environment = get_node("WorldEnvironment")
+	
 
 func _process(delta):
 	time += time_rate * delta
@@ -33,3 +38,8 @@ func _process(delta):
 	moon.light_color = moon_color.sample(time)
 	moon.light_energy = moon_intensity.sample(time)
 	moon.visible = moon.light_energy > 0
+	
+	environment.environment.sky.sky_material.set("sky_top_color", sky_top_color.sample(time))
+	environment.environment.sky.sky_material.set("sky_horizon_color", sky_horizon_color.sample(time))
+	environment.environment.sky.sky_material.set("ground_bottom_color", sky_top_color.sample(time))
+	environment.environment.sky.sky_material.set("ground_horizon_color", sky_horizon_color.sample(time))
