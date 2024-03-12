@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c382pn5e62eg1"]
+
+[ext_resource type="Script" path="res://apple.gd" id="1_6fkey"]
+[ext_resource type="PackedScene" uid="uid://deqe5458s6d2d" path="res://Models/apple/apple.glb" id="2_wpbwb"]
+
+[node name="apple" type="RigidBody3D" groups=["apple"]]
+mass = 0.2
+gravity_scale = 0.0
+script = ExtResource("1_6fkey")
+
+[node name="apple" parent="." instance=ExtResource("2_wpbwb")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

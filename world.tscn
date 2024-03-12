@@ -26,7 +26,7 @@ _data = [Vector2(0.0998487, 1), 0.0, 0.0, 0, 0, Vector2(0.25416, 0), 0.0, 0.0, 0
 point_count = 4
 
 [sub_resource type="Gradient" id="Gradient_c0e12"]
-offsets = PackedFloat32Array(0, 0.381579, 0.660929, 1)
+offsets = PackedFloat32Array(0, 0.381579, 0.623431, 1)
 colors = PackedColorArray(0.196078, 0, 0.470588, 1, 0.34902, 0.478431, 1, 1, 0.34902, 0.478431, 1, 1, 0.196078, 0, 0.470588, 1)
 
 [sub_resource type="Gradient" id="Gradient_0bh2o"]
@@ -89,18 +89,18 @@ shadow_enabled = true
 [node name="Moon" type="DirectionalLight3D" parent="DayandNightCycle"]
 
 [node name="TreePine" parent="." instance=ExtResource("4_g4dyo")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2, 0, 7)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2, -0.505609, 7)
 
 [node name="TreePine2" parent="." instance=ExtResource("4_g4dyo")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 6.51274, -0.351353, -0.878023)
 
 [node name="TreePine3" parent="." instance=ExtResource("4_g4dyo")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.70086, -0.43468, 5.76749)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.372477, -0.43468, 5.76749)
 
 [node name="TreePine4" parent="." instance=ExtResource("4_g4dyo")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 6.26714, -0.395995, 4.8157)
 
 [node name="TreePine5" parent="." instance=ExtResource("4_g4dyo")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 6.72631, -0.844762, 2.1805)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 6.72631, -0.443018, 2.1805)
 
 [editable path="StaticBody3D/Better_Island"]
