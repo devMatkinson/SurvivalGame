@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cloh2wfhpmwst"]
+[gd_scene load_steps=8 format=3 uid="uid://cloh2wfhpmwst"]
 
 [ext_resource type="Script" path="res://SpringArm3D.gd" id="1_aw05n"]
 [ext_resource type="Script" path="res://character_body_3d.gd" id="1_tdfs3"]
+[ext_resource type="Script" path="res://PlayerNeeds.gd" id="3_0ml5r"]
+[ext_resource type="Script" path="res://Need.gd" id="3_5ud50"]
+[ext_resource type="PackedScene" uid="uid://cp3hmwfsve357" path="res://progress_bar.tscn" id="3_jctwo"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_8rgko"]
 
@@ -24,3 +27,47 @@ spring_length = 3.0
 script = ExtResource("1_aw05n")
 
 [node name="Camera3D" type="Camera3D" parent="Node3D/SpringArm3D"]
+
+[node name="PlayerNeeds" type="Node3D" parent="."]
+script = ExtResource("3_0ml5r")
+no_hunger_health_decay = 1.0
+no_thirst_health_decay = 1.0
+
+[node name="Health" type="Node" parent="PlayerNeeds" node_paths=PackedStringArray("ui_bar")]
+script = ExtResource("3_5ud50")
+max_value = 100.0
+start_value = 100.0
+ui_bar = NodePath("ProgressBar")
+
+[node name="ProgressBar" parent="PlayerNeeds/Health" instance=ExtResource("3_jctwo")]
+offset_left = 22.0
+offset_top = 19.0
+offset_right = 268.0
+offset_bottom = 46.0
+need_name = "Health"
+
+[node name="Hunger" type="Node" parent="PlayerNeeds" node_paths=PackedStringArray("ui_bar")]
+script = ExtResource("3_5ud50")
+max_value = 100.0
+start_value = 100.0
+ui_bar = NodePath("ProgressBar")
+
+[node name="ProgressBar" parent="PlayerNeeds/Hunger" instance=ExtResource("3_jctwo")]
+offset_left = 20.0
+offset_top = 66.0
+offset_right = 266.0
+offset_bottom = 93.0
+need_name = "Hunger"
+
+[node name="Thirst" type="Node" parent="PlayerNeeds" node_paths=PackedStringArray("ui_bar")]
+script = ExtResource("3_5ud50")
+max_value = 100.0
+start_value = 100.0
+ui_bar = NodePath("ProgressBar")
+
+[node name="ProgressBar" parent="PlayerNeeds/Thirst" instance=ExtResource("3_jctwo")]
+offset_left = 21.0
+offset_top = 121.0
+offset_right = 267.0
+offset_bottom = 148.0
+need_name = "Thirst"
