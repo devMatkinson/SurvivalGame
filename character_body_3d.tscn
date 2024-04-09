@@ -78,3 +78,5 @@ need_name = "Thirst"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_ky44l")
+
+[connection signal="area_entered" from="Area3D" to="PlayerNeeds" method="_on_area_3d_area_entered"]
