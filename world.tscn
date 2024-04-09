@@ -17,7 +17,7 @@ script = ExtResource("1_fp6ey")
 [node name="Better_Island" parent="." instance=ExtResource("2_rfovm")]
 
 [node name="Cube" parent="Better_Island" index="0"]
-transform = Transform3D(6.87396, 0, 0, 0, 1, 0, 0, 0, 6.87396, 0, -1.4927, 0)
+transform = Transform3D(20.622, 0, 0, 0, 3, 0, 0, 0, 20.622, 0, -4.44256, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Better_Island/Cube" index="0"]
 
