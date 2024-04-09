@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://s5gdk8nt5msd"]
+
+[ext_resource type="PackedScene" uid="uid://dpql0u8tn7p6v" path="res://Botabag/BotaBag.glb" id="1_rgstt"]
+
+[node name="Botabag" type="Node3D"]
+
+[node name="BotaBag" parent="." instance=ExtResource("1_rgstt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0684865, -1.19209e-07, 0.714639)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cloh2wfhpmwst"]
+[gd_scene load_steps=9 format=3 uid="uid://cloh2wfhpmwst"]
 
 [ext_resource type="Script" path="res://SpringArm3D.gd" id="1_aw05n"]
 [ext_resource type="Script" path="res://character_body_3d.gd" id="1_tdfs3"]
@@ -9,6 +9,8 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_8rgko"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a6yxx"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ky44l"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05238, 0)
@@ -71,3 +73,8 @@ offset_top = 121.0
 offset_right = 267.0
 offset_bottom = 148.0
 need_name = "Thirst"
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_ky44l")

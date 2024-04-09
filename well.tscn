@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://beykbfjb0slvc"]
+
+[ext_resource type="Script" path="res://Well.gd" id="1_16a16"]
+[ext_resource type="PackedScene" uid="uid://dif58q4xivqcr" path="res://well/well.glb" id="2_l1e0h"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_s26qr"]
+height = 2.524
+radius = 2.07
+
+[node name="Well" type="Node3D"]
+script = ExtResource("1_16a16")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="Control" type="Control" parent="SubViewport"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.509664, 0)
+shape = SubResource("CylinderShape3D_s26qr")
+
+[node name="well" parent="." instance=ExtResource("2_l1e0h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0444124, 0)

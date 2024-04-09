@@ -16,15 +16,15 @@ script = ExtResource("2_dj6p8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ho4eq")
 
-[node name="AppleSpawmPoint" type="Node3D" parent="StaticBody3D"]
+[node name="AppleSpawnPoint" type="Node3D" parent="StaticBody3D"]
 
-[node name="Marker3D3" type="Marker3D" parent="StaticBody3D/AppleSpawmPoint"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.231979, 0.48083, 0)
+[node name="Marker3D3" type="Marker3D" parent="StaticBody3D/AppleSpawnPoint"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.218908, 0.514958, 0.0205936)
 
-[node name="Marker3D" type="Marker3D" parent="StaticBody3D/AppleSpawmPoint"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061595, 0.488945, 0.184458)
+[node name="Marker3D" type="Marker3D" parent="StaticBody3D/AppleSpawnPoint"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061595, 0.509708, 0.184458)
 
-[node name="Marker3D2" type="Marker3D" parent="StaticBody3D/AppleSpawmPoint"]
+[node name="Marker3D2" type="Marker3D" parent="StaticBody3D/AppleSpawnPoint"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0342641, 0.508757, -0.32828)
 
 [node name="Timer" type="Timer" parent="StaticBody3D"]

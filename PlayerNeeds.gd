@@ -34,3 +34,14 @@ func _process(delta):
 	health.update_ui_bar()
 	hunger.update_ui_bar()
 	thirst.update_ui_bar()
+	
+func _on_area_3d_area_entered(area):
+	if area.is_in_group("apple"):
+		area.get_parent().queue_free()
+		$PlayerNeeds.eat(100)
+	
+func eat(amount):
+	hunger.add(amount)
+	
+func drink(amount):
+	thirst.add(amount)
