@@ -38,7 +38,7 @@ func _process(delta):
 func _on_area_3d_area_entered(area):
 	if area.is_in_group("apple"):
 		area.get_parent().queue_free()
-		$PlayerNeeds.eat(100)
+		eat(100)
 	
 func eat(amount):
 	hunger.add(amount)
